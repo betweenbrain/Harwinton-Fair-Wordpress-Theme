@@ -1,4 +1,6 @@
 <?php
+// wp_enqueue_style( 'style', get_stylesheet_uri() );
+
 if ( ! function_exists( 'harwintonfair_setup' ) ) {
 	function harwintonfair_setup() {
 		/**
@@ -27,7 +29,7 @@ add_action( 'after_setup_theme', 'harwintonfair_setup' );
 function harwintonfair_customize_register( $wp_customize ) {
 	// add color picker setting
 	$wp_customize->add_setting(
-		'link_color', array(
+		'bar_color', array(
 			'default' => '#ff0000',
 		)
 	);
@@ -35,10 +37,10 @@ function harwintonfair_customize_register( $wp_customize ) {
 	// add color picker control
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
-			$wp_customize, 'link_color', array(
-				'label'    => 'Link Color',
+			$wp_customize, 'bar_color', array(
+				'label'    => 'Top/Bottom Bar Color',
 				'section'  => 'colors',
-				'settings' => 'link_color',
+				'settings' => 'bar_color',
 			)
 		)
 	);

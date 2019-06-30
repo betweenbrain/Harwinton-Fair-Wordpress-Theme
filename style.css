@@ -1,0 +1,16 @@
+/*
+Theme Name: Harwinton Fair
+Author: Matt Thomas
+Author URI: https://betweenbrain.com
+Description: Custom WordPress theme developed for The Harwinton Fair
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: harwintonfair
+*/
+
+
+.bar{
+    background-color: rebeccapurple;
+    display: block;
+}
