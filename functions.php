@@ -1,5 +1,32 @@
 <?php
 // wp_enqueue_style( 'style', get_stylesheet_uri() );
+// wp_enqueue_style( 'slider', get_template_directory_uri() . '/css/slider.css',false,'1.1','all');
+
+function harwintonfair_widgets() {
+
+	register_sidebar( array(
+		'name'          => 'Call To Action',
+		'id'            => 'call_to_action',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+    ) );
+    
+    register_sidebar( array(
+		'name'          => 'Main Menu',
+		'id'            => 'main_menu',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+}
+add_action( 'widgets_init', 'harwintonfair_widgets' );
+?>
+
+<?php
 
 if ( ! function_exists( 'harwintonfair_setup' ) ) {
 	function harwintonfair_setup() {

@@ -10,7 +10,7 @@
 	// Maybe remove to optimize the site?
 	// wp_head();
 	?>
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/normalize.css" type="text/css" media="all">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/normalize.css" type="text/css" media="all">
   <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css" media="all">
 	<?php
 		$bar_color = get_theme_mod( 'bar_color' );
@@ -45,6 +45,18 @@ if ( get_bloginfo( 'name' ) ) {
 	bloginfo( 'name' );
 };
 ?>
+
+<?php if ( is_active_sidebar( 'main_menu' ) ) : ?>
+	<div>
+		<?php dynamic_sidebar( 'main_menu' ); ?>
+	</div>
+<?php endif; ?>
+
+<?php if ( is_active_sidebar( 'call_to_action' ) ) : ?>
+	<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+		<?php dynamic_sidebar( 'call_to_action' ); ?>
+	</div>
+<?php endif; ?>
 
 <?php
 if ( have_posts() ) :
