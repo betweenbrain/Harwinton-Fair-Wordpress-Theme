@@ -10,15 +10,16 @@
 	// Maybe remove to optimize the site?
 	// wp_head();
 	?>
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/normalize.css" type="text/css" media="all">
   <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css" media="all">
 	<?php
-		$link_color = get_theme_mod( 'link_color' );
+		$bar_color = get_theme_mod( 'bar_color' );
 
-	if ( $link_color ) :
+	if ( $bar_color ) :
 		?>
 			<style type="text/css">
 				.bar {
-					background-color: <?php echo $link_color; ?>;
+					background-color: <?php echo $bar_color; ?>;
 				}
 			</style>
 			<?php
@@ -27,7 +28,12 @@
 </head>
 
 <body>
-<div class="bar"></div>
+<?php
+// Site description.
+if ( $description = get_bloginfo( 'description', 'display' ) ) :
+	?>
+		<div class="bar"><?php echo $description; ?></div>
+<?php endif; ?>
 
 <?php if ( has_custom_logo() ) : ?>
 		<?php the_custom_logo(); ?>
@@ -39,12 +45,6 @@ if ( get_bloginfo( 'name' ) ) {
 	bloginfo( 'name' );
 };
 ?>
-<?php
-// Site description.
-if ( $description = get_bloginfo( 'description', 'display' ) ) :
-	?>
-		<?php echo $description; ?>
-<?php endif; ?>
 
 <?php
 if ( have_posts() ) :
