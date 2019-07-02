@@ -86,7 +86,7 @@ function harwintonfair_customize_register( $wp_customize ) {
 			'type'        => 'select',
 			'section'     => 'static_front_page',
 			'label'       => __( 'Featured Category' ),
-			'description' => __( 'Category of posts displayed on the homepage' ),
+			'description' => __( 'Category of posts displayed on the homepage.' ),
 			'choices'     => getCatArray(),
 		)
 	);
