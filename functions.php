@@ -16,8 +16,9 @@ function harwintonfair_widgets() {
 
 	register_sidebar(
 		array(
-			'name'          => 'Main Menu',
+			'name'          =>  __( 'Main Menu', 'harwintonfair' ),
 			'id'            => 'main_menu',
+			'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'harwintonfair' ),
 			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h2 class="rounded">',
@@ -27,9 +28,6 @@ function harwintonfair_widgets() {
 
 }
 add_action( 'widgets_init', 'harwintonfair_widgets' );
-?>
-
-<?php
 
 if ( ! function_exists( 'harwintonfair_setup' ) ) {
 	function harwintonfair_setup() {
