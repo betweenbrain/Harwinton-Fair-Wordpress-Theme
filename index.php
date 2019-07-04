@@ -71,6 +71,8 @@ if ( have_posts() ) :
 <?php endwhile; ?>
 <?php endif; ?>
 <div class="bar"></div>
-  <script src="js/scripts.js"></script>
+<?php 
+// Required for customizer admin functionality.
+wp_footer(); ?>
 </body>
 </html>
