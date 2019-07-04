@@ -25,11 +25,13 @@
 </head>
 
 <body>
-<?php
-// Site description.
-if ( $description = get_bloginfo( 'description', 'display' ) ) :
-	?>
-		<div class="bar"><?php echo $description; ?></div>
+<?php // Site description.
+if ( $description = get_bloginfo( 'description', 'display' ) ) : ?>
+		<div class="bar">
+			<div class="top-bar">
+				<?php echo $description; ?>
+			</div>
+		</div>
 <?php endif; ?>
 
 <?php if ( has_custom_logo() ) : ?>
@@ -68,8 +70,9 @@ if ( have_posts() ) :
 <?php endwhile; ?>
 <?php endif; ?>
 <div class="bar"></div>
-<?php 
+<?php
 // Required for customizer admin functionality.
-wp_footer(); ?>
+wp_footer();
+?>
 </body>
 </html>
