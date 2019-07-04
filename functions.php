@@ -1,6 +1,10 @@
 <?php
-// wp_enqueue_style( 'style', get_stylesheet_uri() );
-// wp_enqueue_style( 'slider', get_template_directory_uri() . '/css/slider.css',false,'1.1','all');
+
+add_action( 'wp_enqueue_scripts', function() {
+	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/normalize.css', false, '1.0', 'all' );
+});
+
 function harwintonfair_widgets() {
 
 	register_sidebar(
@@ -16,9 +20,9 @@ function harwintonfair_widgets() {
 
 	register_sidebar(
 		array(
-			'name'          =>  __( 'Main Menu', 'harwintonfair' ),
+			'name'          => 'Main Menu',
 			'id'            => 'main_menu',
-			'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'harwintonfair' ),
+			'description'   => 'Widgets in this area will be shown on all posts and pages.',
 			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h2 class="rounded">',
