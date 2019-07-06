@@ -41,7 +41,9 @@
 			<?php endif; ?>
 
 			<?php if (is_active_sidebar('main_menu')) : ?>
-				<?php dynamic_sidebar('main_menu'); ?>
+				<nav class="main-navigation" role="navigation">
+					<?php dynamic_sidebar('main_menu'); ?>
+				</nav>
 			<?php endif; ?>
 		</div>
 	<?php endif; ?>
