@@ -13,7 +13,8 @@
 	if ($bar_color = get_theme_mod('bar_color')) : ?>
 		<style type="text/css">
 			.bar {
-				background-color: <?php echo $bar_color; ?>;
+				background-color: <?php echo $bar_color;
+									?>;
 			}
 		</style>
 	<?php
@@ -22,26 +23,31 @@
 </head>
 
 <body>
-<?php 
-if ($description = get_bloginfo('description', 'display')) :
-	?>
-	<div class="bar">
-		<div class="top-bar">
-			<?php echo $description; ?>
+	<?php
+	if ($description = get_bloginfo('description', 'display')) :
+		?>
+		<div class="bar">
+			<div class="wrapper">
+				<?php echo $description; ?>
+			</div>
 		</div>
-	</div>
-<?php endif; ?>
+	<?php endif; ?>
 
-<?php if (has_custom_logo()) : ?>
-	<?php the_custom_logo(); ?>
-<?php endif; ?>
 
-<?php if (is_active_sidebar('main_menu')) : ?>
-	<?php dynamic_sidebar('main_menu'); ?>
-<?php endif; ?>
+	<?php if (has_custom_logo() || is_active_sidebar('main_menu')) : ?>
+		<div class="wrapper">
+			<?php if (has_custom_logo()) : ?>
+				<?php the_custom_logo(); ?>
+			<?php endif; ?>
 
-<?php if (is_active_sidebar('call_to_action')) : ?>
-	<div class="call-to-action">
-		<?php dynamic_sidebar('call_to_action'); ?>
-	</div>
-<?php endif; ?>
+			<?php if (is_active_sidebar('main_menu')) : ?>
+				<?php dynamic_sidebar('main_menu'); ?>
+			<?php endif; ?>
+		</div>
+	<?php endif; ?>
+
+	<?php if (is_active_sidebar('call_to_action')) : ?>
+		<div class="call-to-action">
+			<?php dynamic_sidebar('call_to_action'); ?>
+		</div>
+	<?php endif; ?>
