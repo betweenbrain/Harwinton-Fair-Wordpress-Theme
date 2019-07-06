@@ -26,7 +26,7 @@
 	<?php
 	if ($description = get_bloginfo('description', 'display')) :
 		?>
-		<div class="bar">
+		<div class="headline bar">
 			<div class="wrapper">
 				<?php echo $description; ?>
 			</div>
