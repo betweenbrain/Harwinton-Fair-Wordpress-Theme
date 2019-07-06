@@ -25,12 +25,24 @@ add_action(
 
 		register_sidebar(
 			array(
+				'name'          => 'Footer Menu',
+				'id'            => 'footer_menu',
+				'description'   => 'Widgets in this area will be shown on all posts and pages.',
+				'before_widget' => null,
+				'after_widget'  => null,
+				'before_title'  => '<h2>',
+				'after_title'   => '</h2>',
+			)
+		);
+
+		register_sidebar(
+			array(
 				'name'          => 'Main Menu',
 				'id'            => 'main_menu',
 				'description'   => 'Widgets in this area will be shown on all posts and pages.',
-				'before_widget' => '<div>',
-				'after_widget'  => '</div>',
-				'before_title'  => '<h2 class="rounded">',
+				'before_widget' => null,
+				'after_widget'  => null,
+				'before_title'  => '<h2>',
 				'after_title'   => '</h2>',
 			)
 		);
