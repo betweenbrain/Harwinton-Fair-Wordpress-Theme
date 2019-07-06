@@ -18,11 +18,11 @@ get_header(); ?>
 		$sticky = array_slice($sticky, 0, 5);
 
 		/* Query sticky posts */
-		$the_query = new WP_Query(array('post__in' => $sticky, 'ignore_sticky_posts' => 1));
+		$query = new WP_Query(array('post__in' => $sticky, 'ignore_sticky_posts' => 1));
 		// The Loop
-		if ($the_query->have_posts()) {
-			while ($the_query->have_posts()) {
-				$the_query->the_post();
+		if ($query->have_posts()) {
+			while ($query->have_posts()) {
+				$query->the_post();
 				echo get_template_part('components/content', 'sticky');
 			}
 		}
