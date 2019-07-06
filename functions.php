@@ -47,10 +47,10 @@ add_action(
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 190,
-				'width'       => 190,
-				'flex-width'  => false,
-				'flex-height' => false,
+				'height'      => 100,
+				'width'       => 210,
+				'flex-width'  => true,
+				'flex-height' => true,
 			)
 		);
 	}
