@@ -13,10 +13,32 @@ body{
     color: #333;
     font: 400 1rem/1.6 Karla,sans-serif;
 }
-
 .bar{
+    background: #524656;
+    padding: 1em;
+
+}
+
+.bar,
+.call-to-action{
     color: #fff;
-    background-color: rebeccapurple;
     display: block;
+}
+
+.call-to-action{
+    background: #cf4647;
     padding: 2em;
+
+}
+
+.top-bar{
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+    .top-bar{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1040px;
+    }
 }
