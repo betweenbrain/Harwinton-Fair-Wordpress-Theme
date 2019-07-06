@@ -23,15 +23,15 @@ get_header(); ?>
 		if ($the_query->have_posts()) {
 			while ($the_query->have_posts()) {
 				$the_query->the_post();
-				echo get_template_part('components/page/content', 'sticky');
+				echo get_template_part('components/content', 'sticky');
 			}
 		}
 		wp_reset_postdata();
 	}
 	?>
-	<main id="main" class="site-main" role="main">
+	<main class="wrapper" role="main">
 		<?php while (have_posts()) : the_post(); ?>
-			<?php get_template_part('components/page/content', 'page'); ?>
+			<?php get_template_part('components/content', 'page'); ?>
 		<?php endwhile; ?>
 	</main>
 </div>
