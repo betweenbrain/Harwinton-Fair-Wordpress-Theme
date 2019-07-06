@@ -37,13 +37,6 @@
 		<?php the_custom_logo(); ?>
 	<?php endif; ?>
 
-	<?php
-	// Site name.
-	if (get_bloginfo('name')) {
-		bloginfo('name');
-	};
-	?>
-
 	<?php if (is_active_sidebar('main_menu')) : ?>
 		<?php dynamic_sidebar('main_menu'); ?>
 	<?php endif; ?>
