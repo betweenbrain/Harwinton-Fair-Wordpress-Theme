@@ -17,9 +17,7 @@ get_header(); ?>
 		/* Get the 5 newest stickies (change 5 for a different number) */
 		$sticky = array_slice($sticky, 0, 5);
 
-		/* Query sticky posts */
-		$query = new WP_Query(array('post__in' => $sticky, 'ignore_sticky_posts' => 1));
-		// The Loop
+		$query = new WP_Query(array('posts_per_page' => 1, 'post__in' => $sticky, 'ignore_sticky_posts' => 1));
 		if ($query->have_posts()) {
 			while ($query->have_posts()) {
 				$query->the_post();
@@ -30,9 +28,16 @@ get_header(); ?>
 	}
 	?>
 	<main class="wrapper" role="main">
-		<?php while (have_posts()) : the_post(); ?>
-			<?php get_template_part('components/content', 'page'); ?>
-		<?php endwhile; ?>
+		<?php
+		$category = get_theme_mod('featured_category');
+		$query = new WP_Query(array('posts_per_page' => 4, 'cat' => $category, 'ignore_sticky_posts' => 1));
+		if ($query->have_posts()) {
+			while ($query->have_posts()) {
+				$query->the_post();
+				echo get_template_part('components/content', 'page');
+			}
+		}
+		wp_reset_postdata(); ?>
 	</main>
 </div>
 <?php get_footer(); ?>
