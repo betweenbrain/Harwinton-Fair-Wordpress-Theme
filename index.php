@@ -16,5 +16,4 @@ if (have_posts()) :
 		</article>
 	<?php endwhile; ?>
 <?php endif; ?>
-<div class="bar"></div>
 <?php get_footer(); ?>
