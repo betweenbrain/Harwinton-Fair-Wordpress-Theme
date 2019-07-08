@@ -26,7 +26,7 @@
 	<?php
 	if ($description = get_bloginfo('description', 'display')) :
 		?>
-		<div class="headline bar">
+		<div class="headline bar top-bar">
 			<div class="wrapper">
 				<?php echo $description; ?>
 			</div>
@@ -35,16 +35,18 @@
 
 
 	<?php if (has_custom_logo() || is_active_sidebar('main_menu')) : ?>
-		<div class="wrapper">
-			<?php if (has_custom_logo()) : ?>
-				<?php the_custom_logo(); ?>
-			<?php endif; ?>
+		<div class="sticky">
+			<div class="wrapper">
+				<?php if (has_custom_logo()) : ?>
+					<?php the_custom_logo(); ?>
+				<?php endif; ?>
 
-			<?php if (is_active_sidebar('main_menu')) : ?>
-				<nav class="main-navigation" role="navigation">
-					<?php dynamic_sidebar('main_menu'); ?>
-				</nav>
-			<?php endif; ?>
+				<?php if (is_active_sidebar('main_menu')) : ?>
+					<nav class="main-navigation" role="navigation">
+						<?php dynamic_sidebar('main_menu'); ?>
+					</nav>
+				<?php endif; ?>
+			</div>
 		</div>
 	<?php endif; ?>
 

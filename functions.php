@@ -6,6 +6,7 @@ add_action(
 		wp_enqueue_style('style', get_stylesheet_uri());
 		wp_enqueue_style('normalize', get_template_directory_uri() . '/normalize.css', false, '1.0', 'all');
 		wp_enqueue_style('navigation', get_template_directory_uri() . '/navigation.css', false, '1.0', 'all');
+		wp_enqueue_script( 'harwintonfair-functions', get_template_directory_uri() . '/functions.js', array( 'jquery' ), '20160531', true );
 	}
 );
 

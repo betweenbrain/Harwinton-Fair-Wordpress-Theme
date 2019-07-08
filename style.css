@@ -34,8 +34,25 @@ body {
   padding: 2em;
 }
 
+.custom-logo {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  max-width: 100%;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  transition: 0.2s;
+}
+
 .headline {
   text-transform: uppercase;
+}
+
+.stuck {
+  background: white;
+  position: sticky;
+  top: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -43,5 +60,11 @@ body {
     margin-left: auto;
     margin-right: auto;
     max-width: 1040px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .stuck .custom-logo {
+    max-height: 50px;
   }
 }
