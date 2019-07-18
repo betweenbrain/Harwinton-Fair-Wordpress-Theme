@@ -12,7 +12,8 @@ var_dump($wp->query_string);
 if (have_posts()) : ?>
 	<main class="wrapper" role="main">
 		<?php while (have_posts()) : the_post(); ?>
-			<?php get_template_part('components/post'); ?>
+		<?php $type = is_page() ? 'page' : 'post'; ?>
+			<?php get_template_part('components/' . $type); ?>
 		<?php endwhile; ?>
 	</main>
 <?php endif; ?>
