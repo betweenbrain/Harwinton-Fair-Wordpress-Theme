@@ -53,11 +53,9 @@ add_action(
 add_action(
 	'after_setup_theme',
 	function () {
-		/**
-		 * Add support for core custom logo.
-		 *
-		 * @link https://codex.wordpress.org/Theme_Logo
-		 */
+		// Enable theme support for featured images. 
+		add_theme_support( 'post-thumbnails' );
+		// Add support for core custom logo. https://codex.wordpress.org/Theme_Logo
 		add_theme_support(
 			'custom-logo',
 			array(
