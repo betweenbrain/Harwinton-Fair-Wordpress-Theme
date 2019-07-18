@@ -13,12 +13,19 @@
  * @package Karuna
  */
 
-get_header(); ?>
+get_header();
+
+echo 'page.php' . "\n";
+global $wp;
+var_dump($wp->query_string);
+
+?>
+
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 		<?php
 		while (have_posts()) : the_post();
-			get_template_part('components/content', 'page');
+			get_template_part('components/page');
 		endwhile;
 		?>
 	</main>
