@@ -3,7 +3,7 @@
  */
 
 ( function( $ ) {
-	var stickyHeader       = $( '.sticky' );
+	var stickyHeader       = $( '.sticky-header' );
 	var topBar             = $( '.top-bar' );
 	var stickyHeaderOffset = topBar.outerHeight();
 	var body               = $( 'body' );

@@ -35,7 +35,7 @@
 
 
 	<?php if (has_custom_logo() || is_active_sidebar('main_menu')) : ?>
-		<div class="sticky">
+		<div class="sticky-header">
 			<div class="wrapper">
 				<?php if (has_custom_logo()) : ?>
 					<?php the_custom_logo(); ?>
