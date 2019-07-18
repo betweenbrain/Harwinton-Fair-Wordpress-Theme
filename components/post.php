@@ -28,13 +28,10 @@ echo 'post.php' . "\n";
 		if (!is_single()) {
 			the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
 		}
-
-		if ('post' === get_post_type()) : ?>
-			<?php get_template_part('components/post/content', 'meta'); ?>
-		<?php
-		endif; ?>
+		?>
 	</header>
 	<div class="entry-content">
+		<?php $meta = get_post_meta($post->ID); ?>
 		<?php
 		the_content(sprintf(
 			wp_kses(__('Continue reading %s <span class="meta-nav">&rarr;</span>', 'harwintonfair'), array('span' => array('class' => array()))),
