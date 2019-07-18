@@ -8,6 +8,7 @@
  * @package Karuna
  */
 
+echo 'post.php' . "\n";
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
