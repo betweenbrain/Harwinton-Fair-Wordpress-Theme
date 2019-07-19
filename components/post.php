@@ -7,10 +7,7 @@
  *
  * @package Karuna
  */
-
-echo 'post.php' . "\n";
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if (is_single() || is_page()) : ?>
 		<div class="post-thumbnail">
@@ -19,7 +16,6 @@ echo 'post.php' . "\n";
 			</a>
 		</div>
 	<?php endif; ?>
-
 	<header class="entry-header">
 		<?php
 		if (is_single()) {
@@ -44,6 +40,4 @@ echo 'post.php' . "\n";
 		));
 		?>
 	</div>
-	<?php get_template_part('components/post/content', 'footer'); ?>
-
-</article><!-- #post-## -->
+</article>

@@ -5,10 +5,6 @@
 
 get_header();
 
-echo 'index.php' . "\n";
-global $wp;
-var_dump($wp->query_string);
-
 if (have_posts()) : ?>
 	<main class="wrapper" role="main">
 		<?php while (have_posts()) : the_post(); ?>
