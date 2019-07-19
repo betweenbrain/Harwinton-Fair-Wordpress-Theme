@@ -6,14 +6,29 @@
 
 get_header();
 
-echo 'archive-events.php' . "\n";
-global $wp;
-var_dump($wp->query_string);
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$events = new WP_Query(array(
+	'post_type' => 'events',
+	'posts_per_page' => '50',
+	'paged' => $paged,
+	'order'      => 'ASC',
+	'orderby'   => 'meta_value',
+	'meta_key'  => 'begin',
+	'meta_type' => 'DATETIME'
+));
+$today = null;
 
-if (have_posts()) : ?>
+if ($events->have_posts()) : ?>
 	<main class="wrapper" role="main">
-		<?php while (have_posts()) : the_post(); ?>
-			<?php get_template_part('components/post'); ?>
+		<?php while ($events->have_posts()) : $events->the_post(); ?>
+			<?php $meta = get_post_meta($post->ID); ?>
+			<?php
+			$date = date('l, F jS', strtotime($meta['begin'][0]));
+			if ($today != $date) {
+				$today = $date; ?>
+				<h2><?php echo $date ?></h2>
+			<?php	} ?>
+			<?php get_template_part('components/event'); ?>
 		<?php endwhile; ?>
 	</main>
 <?php endif; ?>
