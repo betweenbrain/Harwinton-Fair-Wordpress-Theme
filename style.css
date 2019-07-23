@@ -17,6 +17,26 @@ body {
   color: #333;
   font: 400 1rem/1.6 Karla, sans-serif;
 }
+
+a {
+  color: #6636cc;
+  font-weight: 700;
+  text-decoration: none;
+  transition: .3s;
+}
+
+a:visited {
+  color: #6636cc;
+}
+
+a:hover, a:active {
+  outline: 0;
+}
+
+a:hover, a:focus, a:active {
+  color: #85cc36;
+}
+
 .bar {
   background: #524656;
   padding: 1em;
@@ -33,14 +53,6 @@ body {
   font: 700 0.875rem/1.875 Karla, sans-serif;
   text-align: center;
   padding: 2em;
-}
-
-.call-to-action a {
-  color: white;
-}
-
-.call-to-action a:hover {
-  color: rebeccapurple;
 }
 
 .headline {
