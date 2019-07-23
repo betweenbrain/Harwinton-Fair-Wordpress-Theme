@@ -32,8 +32,6 @@
 			</div>
 		</div>
 	<?php endif; ?>
-
-
 	<?php if (has_custom_logo() || is_active_sidebar('main_menu')) : ?>
 		<div class="sticky-header">
 			<div class="wrapper">
@@ -49,7 +47,6 @@
 			</div>
 		</div>
 	<?php endif; ?>
-
 	<?php if (is_active_sidebar('call_to_action')) : ?>
 		<div class="call-to-action">
 			<?php dynamic_sidebar('call_to_action'); ?>
