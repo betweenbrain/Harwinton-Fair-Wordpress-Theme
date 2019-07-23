@@ -6,8 +6,6 @@
  *
  * @package harwintonfair
  */
-
-echo 'page.php' . "\n";
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
