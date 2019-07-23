@@ -30,23 +30,39 @@ body {
 
 .call-to-action {
   background: #cf4647;
+  font: 700 0.875rem/1.875 Karla, sans-serif;
   text-align: center;
   padding: 2em;
 }
 
-.custom-logo {
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  perspective: 1000;
-  max-width: 100%;
-  max-height: 100px;
-  width: auto;
-  height: auto;
-  transition: 0.2s;
+.call-to-action a {
+  color: white;
+}
+
+.call-to-action a:hover {
+  color: rebeccapurple;
 }
 
 .headline {
   text-transform: uppercase;
+}
+
+/* Header */
+.custom-logo {
+  backface-visibility: hidden;
+  height: auto;
+  max-width: 100%;
+  max-height: 100px;
+  width: auto;
+  padding: 1.6rem 0;
+  perspective: 1000;
+  transform: translateZ(0);
+  transition: 0.2s;
+}
+
+.sticky-header .wrapper {
+  display: grid;
+  grid-template-columns: .33fr 1fr;
 }
 
 .stuck {
@@ -56,8 +72,43 @@ body {
   z-index: 9999;
 }
 
+.top-bar {
+  font: 700 0.875rem/1.875 Karla, sans-serif;
+}
+
+/* Shift page down when logged in */
 .customize-support .stuck {
   top: 2rem;
+}
+
+/* Navigation */
+.main-navigation {
+  font: 800 0.875rem;
+}
+
+.main-navigation ul {
+  float: right;
+  padding: 1.6rem 0;
+}
+
+.main-navigation li {
+  display: inline-block;
+}
+
+.main-navigation a, 
+.main-navigation a:visited {
+  color: #333;
+  display: block;
+  padding: .8em .4em;
+  text-decoration: none;
+}
+
+.main-navigation a:hover, 
+.main-navigation a:focus, 
+.main-navigation a:visited:hover, 
+.main-navigation a:visited:focus {
+  color: #333;
+  opacity: .5;
 }
 
 @media screen and (min-width: 768px) {

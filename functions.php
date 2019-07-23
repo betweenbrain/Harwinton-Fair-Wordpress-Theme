@@ -5,8 +5,7 @@ add_action(
 	function () {
 		wp_enqueue_style('style', get_stylesheet_uri());
 		wp_enqueue_style('normalize', get_template_directory_uri() . '/normalize.css', false, '1.0', 'all');
-		wp_enqueue_style('navigation', get_template_directory_uri() . '/navigation.css', false, '1.0', 'all');
-		wp_enqueue_script( 'harwintonfair-functions', get_template_directory_uri() . '/functions.js', array( 'jquery' ), '20160531', true );
+		wp_enqueue_script('harwintonfair-functions', get_template_directory_uri() . '/functions.js', array('jquery'), '20160531', true);
 	}
 );
 
@@ -54,7 +53,7 @@ add_action(
 	'after_setup_theme',
 	function () {
 		// Enable theme support for featured images. 
-		add_theme_support( 'post-thumbnails' );
+		add_theme_support('post-thumbnails');
 		// Add support for core custom logo. https://codex.wordpress.org/Theme_Logo
 		add_theme_support(
 			'custom-logo',
