@@ -58,12 +58,12 @@ a:active {
   padding: 2em;
 }
 
-.call-to-action a{
+.call-to-action a {
   color: #fff;
   text-decoration: underline;
 }
 
-.call-to-action a:hover{
+.call-to-action a:hover {
   opacity: 0.7;
 }
 
@@ -99,7 +99,7 @@ a:active {
 
 .stuck .custom-logo,
 .stuck .main-navigation ul {
-  padding: .8rem 0;
+  padding: 0.8rem 0;
 }
 
 .top-bar {
@@ -161,7 +161,24 @@ a:active {
   opacity: 0.7;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 667px) {
+  .custom-logo-link {
+    margin: 0 auto;
+  }
+  .sticky-header .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .main-navigation {
+    margin: 0 auto;
+  }
+
+  .main-navigation li {
+    display: block;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 667px) {
   .wrapper {
     margin-left: auto;
     margin-right: auto;
