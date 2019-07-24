@@ -40,13 +40,16 @@
 			));
 		}
 		if (!is_single()) {
-			$meta = get_post_meta($post->ID) ?>
+			$meta = get_post_meta($post->ID);
+			$terms = wp_get_post_terms($post->ID, 'locations');  ?>
 			<p><?php echo date('g:ia', strtotime($meta['begin'][0])); ?>
 				<?php if (isset($meta['end'])) { ?>
 					until
 					<?php echo date('g:ia', strtotime($meta['end'][0]));
 				} ?>
-				at <?php echo $meta['location'][0] ?>
+				at <?php foreach ($terms as $term) : ?>
+					<a href="/location/<?php echo $term->slug ?>"><?php echo $term->name ?></a>
+				<?php endforeach; ?>
 			</p>
 			<?php the_excerpt();
 		}
