@@ -98,7 +98,7 @@ a:active {
 }
 
 .stuck .custom-logo,
-.stuck .main-navigation ul {
+.stuck .main-navigation .menu {
   padding: 0.8rem 0;
 }
 
@@ -116,28 +116,28 @@ a:active {
   font: 800 0.875rem;
 }
 
-.main-navigation ul {
+.main-navigation .menu {
   float: right;
   margin: 0;
   padding: 1.6rem 0;
 }
 
-.main-navigation li {
+.main-navigation .menu li {
   display: inline-block;
 }
 
-.main-navigation a,
-.main-navigation a:visited {
+.main-navigation .menu a,
+.main-navigation .menu a:visited {
   color: #333;
   display: block;
   padding: 0.8em 0.4em;
   text-decoration: none;
 }
 
-.main-navigation a:hover,
-.main-navigation a:focus,
-.main-navigation a:visited:hover,
-.main-navigation a:visited:focus {
+.main-navigation .menu a:hover,
+.main-navigation .menu a:focus,
+.main-navigation .menu a:visited:hover,
+.main-navigation .menu a:visited:focus {
   color: #333;
   opacity: 0.5;
 }
@@ -169,16 +169,57 @@ a:active {
     grid-template-columns: 1fr;
   }
 
+  /* CSS only mobile menu */
+  #menu #menu-primary,
+  #menu .toggle.close {
+    height: 0;
+    opacity: 0;
+  }
+
+  #menu:target #menu-primary,
+  #menu:target .toggle.close {
+    height: auto;
+    opacity: 1;
+    transition: 0.3s;
+  }
+
+  #menu:target .toggle.open {
+    display: none;
+  }
+
   .main-navigation {
     margin: 0 auto;
   }
 
-  .main-navigation li {
+  .toggle {
+    padding: 0;
+
+    border: 2px solid #6636cc;
+    border-radius: 10px;
+    background: 0 0;
+    box-shadow: none;
+    color: #6636cc;
+    font: 700 1rem/1;
+    letter-spacing: 1px;
+    padding: .8em 1.6em;
+    text-shadow: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s;
+
+  }
+
+  .toggle,
+  .main-navigation .menu li {
     display: block;
     text-align: center;
   }
 }
 @media screen and (min-width: 667px) {
+  .sticky-header .toggle.open {
+    display: none;
+  }
+
   .wrapper {
     margin-left: auto;
     margin-right: auto;

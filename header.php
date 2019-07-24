@@ -26,7 +26,7 @@
 	<?php
 	if ($description = get_bloginfo('description', 'display')) :
 		?>
-		<div class="headline bar top-bar">
+		<div class="headline bar top-bar" id="top">
 			<div class="wrapper">
 				<?php echo $description; ?>
 			</div>
@@ -40,7 +40,9 @@
 				<?php endif; ?>
 
 				<?php if (is_active_sidebar('main_menu')) : ?>
-					<nav class="main-navigation" role="navigation">
+					<nav class="main-navigation" id="menu" role="navigation">
+						<a href="#menu" aria-label="Open main menu" class="toggle open">Menu</a>
+						<a href="#top" aria-label="Close main menu" class="toggle close">Close</a>
 						<?php dynamic_sidebar('main_menu'); ?>
 					</nav>
 				<?php endif; ?>
