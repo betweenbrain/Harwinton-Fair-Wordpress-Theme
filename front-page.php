@@ -20,7 +20,7 @@ get_header(); ?>
 		if ($query->have_posts()) {
 			while ($query->have_posts()) {
 				$query->the_post();
-				echo get_template_part('components/sticky');
+				echo get_template_part('parts/sticky');
 			}
 		}
 		wp_reset_postdata();
@@ -33,7 +33,7 @@ get_header(); ?>
 		if ($query->have_posts()) {
 			while ($query->have_posts()) {
 				$query->the_post();
-				echo get_template_part('components/page');
+				echo get_template_part('parts/page');
 			}
 		}
 		wp_reset_postdata(); ?>

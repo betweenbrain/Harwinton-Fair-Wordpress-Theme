@@ -28,7 +28,7 @@ if ($events->have_posts()) : ?>
 				$today = $date; ?>
 				<h2><?php echo $date ?></h2>
 			<?php	} ?>
-			<?php get_template_part('components/event'); ?>
+			<?php get_template_part('parts/event'); ?>
 		<?php endwhile; ?>
 	</main>
 <?php endif; ?>
