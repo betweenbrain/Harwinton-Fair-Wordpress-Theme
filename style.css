@@ -170,6 +170,15 @@ a:active {
   }
 
   /* CSS only mobile menu */
+  .toggle {
+    border: 2px solid #6636cc;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 0.6em;
+    max-width: 75px;
+    text-align: center;
+  }
+
   #menu #menu-primary,
   #menu .toggle.close {
     height: 0;
@@ -183,6 +192,12 @@ a:active {
     transition: 0.3s;
   }
 
+  #menu .toggle.open,
+  #menu:target .toggle.close {
+    display: block;
+  }
+
+  #menu .toggle.close,
   #menu:target .toggle.open {
     display: none;
   }
@@ -191,28 +206,16 @@ a:active {
     margin: 0 auto;
   }
 
-  .toggle {
-    padding: 0;
-
-    border: 2px solid #6636cc;
-    border-radius: 10px;
-    background: 0 0;
-    box-shadow: none;
-    color: #6636cc;
-    font: 700 1rem/1;
-    letter-spacing: 1px;
-    padding: .8em 1.6em;
-    text-shadow: none;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: .3s;
-
+  .main-navigation .menu li {
+    border-top: 1px solid rgba(153, 153, 153, 0.2);
+    display: block;
+    list-style: none;
+    padding: 0.8em 8rem 0;
+    text-align: center;
   }
 
-  .toggle,
-  .main-navigation .menu li {
-    display: block;
-    text-align: center;
+  .main-navigation .menu li:first-of-type {
+    border-top: none;
   }
 }
 @media screen and (min-width: 667px) {
