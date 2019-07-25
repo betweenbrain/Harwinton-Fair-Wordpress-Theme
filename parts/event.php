@@ -7,13 +7,12 @@
  *
  * @package Karuna
  */
+echo 'event.php';
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if (is_single() || is_page()) : ?>
 		<div class="post-thumbnail">
-			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail(); ?>
-			</a>
+			<?php the_post_thumbnail(); ?>
 		</div>
 	<?php endif; ?>
 	<header class="entry-header">
