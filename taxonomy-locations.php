@@ -19,7 +19,6 @@ $today = null;
 if ($events->have_posts()) : ?>
     <main class="wrapper" role="main">
         <h1>Events at the <?php echo $term->name ?></h1>
-
         <?php while ($events->have_posts()) : $events->the_post(); ?>
             <?php $meta = get_post_meta($post->ID); ?>
             <?php
