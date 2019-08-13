@@ -114,7 +114,7 @@ a:active {
 
 /* Navigation */
 .main-navigation {
-  font: 800 0.875rem;
+  font: 800 0.875rem/1 Karla, sans-serif;
 }
 
 .main-navigation .menu {
