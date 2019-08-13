@@ -6,6 +6,15 @@
 	<title><?php the_title(); ?></title>
 	<meta name="description" content="<?php echo strip_tags( get_the_excerpt() ); ?>">
 	<meta name="author" content="<?php the_title(); ?>">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143005804-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-143005804-1');
+	</script>
 	<?php wp_head(); ?>
 	<?php
 	if ( $bar_color = get_theme_mod( 'bar_color' ) ) :
