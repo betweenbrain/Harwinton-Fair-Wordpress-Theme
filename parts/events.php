@@ -23,7 +23,7 @@ $date      = ( in_array( 'end', $meta ) )
 		<?php
 		if ( is_single() ) {
 			the_title( '<h1 class="entry-title">', '</h1>' );
-			echo $date . ' at ' . $locations[0];
+			echo $date . ' at the ' . $locations[0]->name;
 		}
 		if ( ! is_single() ) {
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
