@@ -9,7 +9,7 @@
  */
 $meta      = get_post_meta( $post->ID );
 $locations = wp_get_post_terms( $post->ID, 'locations' );
-$date      = ( $meta['end'][0] )
+$date      = ( in_array( 'end', $meta ) )
 	? date( 'l, F jS', strtotime( $meta['begin'][0] ) ) . ' at ' . date( 'g:i A', strtotime( $meta['begin'][0] ) ) . ' - ' . date( 'g:i A', strtotime( $meta['end'][0] ) )
 	: date( 'l, F jS', strtotime( $meta['begin'][0] ) ) . ' at ' . date( 'g:i A', strtotime( $meta['begin'][0] ) );
 ?>
