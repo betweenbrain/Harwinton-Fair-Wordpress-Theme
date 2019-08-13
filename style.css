@@ -85,6 +85,10 @@ a:active {
   transition: 0.2s;
 }
 
+.event-day article{
+  margin-left: 1rem;
+}
+
 .sticky-header .wrapper {
   display: grid;
   grid-template-columns: 0.33fr 1fr;
