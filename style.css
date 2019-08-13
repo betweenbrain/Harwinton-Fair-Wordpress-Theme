@@ -92,6 +92,7 @@ a:active {
 
 .stuck {
   background: white;
+  border-bottom: 3px solid #cf4647;
   position: sticky;
   top: 0;
   z-index: 9999;
