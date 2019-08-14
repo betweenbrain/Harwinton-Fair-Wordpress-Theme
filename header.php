@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php the_title(); ?></title>
 	<meta name="description" content="<?php echo strip_tags( get_the_excerpt() ); ?>">
 	<meta name="author" content="<?php the_title(); ?>">
