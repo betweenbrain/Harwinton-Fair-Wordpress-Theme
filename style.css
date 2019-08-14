@@ -227,6 +227,7 @@ a:active {
     display: block;
   }
 
+  #menu-social-menu,
   #menu .toggle.close,
   #menu:target .toggle.open {
     display: none;
