@@ -254,6 +254,15 @@ a:active {
   .main-navigation .menu li:first-of-type {
     border-top: none;
   }
+
+  .two-column {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .two-column aside {
+    order: -1
+  }
 }
 @media screen and (min-width: 667px) {
   #menu .toggle {
