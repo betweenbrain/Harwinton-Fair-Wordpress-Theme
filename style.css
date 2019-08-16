@@ -122,6 +122,10 @@ a:active {
   top: 2rem;
 }
 
+.wp-block-cover {
+  min-height: 230px !important;
+}
+
 /* Navigation */
 .main-navigation {
   font: 800 0.875rem/1 Karla, sans-serif;
@@ -274,7 +278,6 @@ a:active {
 }
 
 /* The ribbons */
-
 .corner-ribbon {
   background: #cf4647;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
