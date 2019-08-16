@@ -3,9 +3,9 @@
 add_action(
 	'wp_enqueue_scripts',
 	function () {
-		wp_enqueue_style('style', get_stylesheet_uri());
-		wp_enqueue_style('normalize', get_template_directory_uri() . '/normalize.css', false, '1.0', 'all');
-		wp_enqueue_script('harwintonfair-functions', get_template_directory_uri() . '/functions.js', array('jquery'), '20160531', true);
+		wp_enqueue_style( 'style', get_stylesheet_uri() );
+		wp_enqueue_style( 'normalize', get_template_directory_uri() . '/normalize.css', false, '1.0', 'all' );
+		wp_enqueue_script( 'harwintonfair-functions', get_template_directory_uri() . '/functions.js', array( 'jquery' ), '20160531', true );
 	}
 );
 
@@ -37,6 +37,18 @@ add_action(
 
 		register_sidebar(
 			array(
+				'name'          => 'Home Sidebar',
+				'id'            => 'home_sidebar',
+				'description'   => 'Widgets in this area will be shown only on the home page.',
+				'before_widget' => null,
+				'after_widget'  => null,
+				'before_title'  => '<h2>',
+				'after_title'   => '</h2>',
+			)
+		);
+
+		register_sidebar(
+			array(
 				'name'          => 'Main Menu',
 				'id'            => 'main_menu',
 				'description'   => 'Widgets in this area will be shown on all posts and pages.',
@@ -52,8 +64,8 @@ add_action(
 add_action(
 	'after_setup_theme',
 	function () {
-		// Enable theme support for featured images. 
-		add_theme_support('post-thumbnails');
+		// Enable theme support for featured images.
+		add_theme_support( 'post-thumbnails' );
 		// Add support for core custom logo. https://codex.wordpress.org/Theme_Logo
 		add_theme_support(
 			'custom-logo',
@@ -72,7 +84,7 @@ add_action(
  */
 add_action(
 	'customize_register',
-	function ($wp_customize) {
+	function ( $wp_customize ) {
 		// add color picker setting
 		$wp_customize->add_setting(
 			'bar_color',
@@ -106,20 +118,19 @@ add_action(
 			array(
 				'type'        => 'select',
 				'section'     => 'static_front_page',
-				'label'       => __('Featured Category'),
-				'description' => __('Category of posts displayed on the homepage.'),
+				'label'       => __( 'Featured Category' ),
+				'description' => __( 'Category of posts displayed on the homepage.' ),
 				'choices'     => getCatArray(),
 			)
 		);
 	}
 );
 
-function getCatArray()
-{
+function getCatArray() {
 	$cats = get_categories();
 	$resp = [];
-	foreach ($cats as $cat) {
-		$resp[$cat->term_id] = $cat->name;
+	foreach ( $cats as $cat ) {
+		$resp[ $cat->term_id ] = $cat->name;
 	}
 	return $resp;
 }

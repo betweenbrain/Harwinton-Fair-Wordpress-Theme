@@ -89,6 +89,12 @@ a:active {
   margin-left: 1rem;
 }
 
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  grid-column-gap: 2.5rem;
+}
+
 .sticky-header .wrapper {
   display: grid;
   grid-template-columns: 0.33fr 1fr;
