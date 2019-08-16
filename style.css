@@ -201,6 +201,11 @@ a:active {
   .custom-logo-link {
     margin: 0 auto;
   }
+
+  main {
+    margin: 1.5rem;
+  }
+
   .sticky-header .wrapper {
     grid-template-columns: 1fr;
   }
@@ -261,7 +266,7 @@ a:active {
   }
 
   .two-column aside {
-    order: -1
+    order: -1;
   }
 }
 @media screen and (min-width: 667px) {
