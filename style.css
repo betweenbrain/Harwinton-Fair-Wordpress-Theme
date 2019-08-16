@@ -122,10 +122,6 @@ a:active {
   top: 2rem;
 }
 
-.wp-block-cover {
-  min-height: 230px !important;
-}
-
 /* Navigation */
 .main-navigation {
   font: 800 0.875rem/1 Karla, sans-serif;
@@ -262,6 +258,9 @@ a:active {
 @media screen and (min-width: 667px) {
   #menu .toggle {
     display: none;
+  }
+  .wp-block-cover {
+    min-height: 230px !important;
   }
 
   .wrapper {
