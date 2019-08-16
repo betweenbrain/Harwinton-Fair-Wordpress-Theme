@@ -306,6 +306,14 @@ a:active {
   width: 200px;
 }
 
+.corner-ribbon a {
+  color: white;
+}
+
+.corner-ribbon a:hover {
+  opacity: 0.7;
+}
+
 /* Custom styles */
 .corner-ribbon.sticky {
   position: fixed;
