@@ -21,7 +21,7 @@ $today  = null;
 
 if ( $events->have_posts() ) : ?>
 	<main class="wrapper" role="main">
-		<section class="event-day">	
+		<section class="event-day">
 		<?php while ( $events->have_posts() ) : ?>
 			<?php
 			$events->the_post();
@@ -31,14 +31,17 @@ if ( $events->have_posts() ) : ?>
 			$date = date( 'l, F jS', strtotime( $meta['begin'][0] ) );
 			if ( $today != $date ) : ?>
 				<?php if ( ! is_null( $today ) ) : ?>
+					</ol>
 				</section>
 				<section class="event-day">
 			<?php endif; ?>
 				<?php $today = $date; ?>
 				<h2><?php echo $date; ?></h2>
+				<ol>
 				<?php endif; ?>
 			<?php get_template_part( 'parts/program' ); ?>
 		<?php endwhile; ?>
+			</ol>
 		</section>
 	</main>
 <?php endif; ?>
