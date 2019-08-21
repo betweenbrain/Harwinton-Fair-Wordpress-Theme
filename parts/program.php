@@ -15,6 +15,7 @@ $date      = ( in_array( 'end', $meta ) )
 ?>
 <?php if ( is_single() || is_page() ) : ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<a href="/program">Back to Fair Program</a>
 		<div class="post-thumbnail">
 			<?php the_post_thumbnail(); ?>
 		</div>

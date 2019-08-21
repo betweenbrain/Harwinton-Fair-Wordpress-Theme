@@ -22,6 +22,7 @@ $events = new WP_Query(
 $today  = null;
 if ( $events->have_posts() ) : ?>
 	<main class="wrapper" role="main">
+        <a href="/program">Back to Fair Program</a>
 		<h1>Events at the <?php echo $term->name; ?></h1>
 		<?php
 		while ( $events->have_posts() ) :
