@@ -56,7 +56,7 @@ $date      = ( in_array( 'end', $meta ) )
 		<?php if ( sizeof( $locations ) > 0 ) : ?>
 			at the
 			<?php foreach ( $locations as $term ) : ?>
-				<a href="/location/<?php echo $term->slug; ?>"><?php echo $term->name; ?></a>
+				<a href="/program/location/<?php echo $term->slug; ?>"><?php echo $term->name; ?></a>
 			<?php endforeach; ?>
 		<?php endif; ?>
 		<?php if($post->post_excerpt) : ?>
