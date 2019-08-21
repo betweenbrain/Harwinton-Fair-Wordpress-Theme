@@ -6,6 +6,10 @@ $events = new WP_Query(
     array(
         'posts_per_page' => -1,
         'post_type' => 'program',
+        'order'          => 'ASC',
+		'orderby'        => 'meta_value',
+		'meta_key'       => 'begin',
+		'meta_type'      => 'DATETIME',
         'tax_query' => array(
             array(
                 'taxonomy' => 'locations',
