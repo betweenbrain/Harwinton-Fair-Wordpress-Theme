@@ -8,7 +8,7 @@ get_header();
 $paged  = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $events = new WP_Query(
 	array(
-		'post_type'      => 'events',
+		'post_type'      => 'program',
 		'posts_per_page' => '50',
 		'paged'          => $paged,
 		'order'          => 'ASC',
@@ -37,7 +37,7 @@ if ( $events->have_posts() ) : ?>
 				<?php $today = $date; ?>
 				<h2><?php echo $date; ?></h2>
 				<?php endif; ?>
-			<?php get_template_part( 'parts/events' ); ?>
+			<?php get_template_part( 'parts/program' ); ?>
 		<?php endwhile; ?>
 		</section>
 	</main>

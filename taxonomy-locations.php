@@ -5,7 +5,7 @@ $term = get_queried_object();
 $events = new WP_Query(
     array(
         'posts_per_page' => -1,
-        'post_type' => 'events',
+        'post_type' => 'program',
         'tax_query' => array(
             array(
                 'taxonomy' => 'locations',
@@ -27,7 +27,7 @@ if ($events->have_posts()) : ?>
                 $today = $date; ?>
                 <h2><?php echo $date ?></h2>
             <?php    } ?>
-            <?php get_template_part('parts/events'); ?>
+            <?php get_template_part('parts/program'); ?>
         <?php endwhile; ?>
     </main>
 <?php endif; ?>
