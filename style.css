@@ -95,7 +95,7 @@ li.entry-content {
 
 .two-column {
   display: grid;
-  grid-template-columns: 1fr 150px;
+  grid-template-columns: 1fr 13rem;
   grid-column-gap: 2.5rem;
 }
 
