@@ -58,6 +58,18 @@ add_action(
 				'after_title'   => '</h2>',
 			)
 		);
+
+		register_sidebar(
+			array(
+				'name'          => 'Program Sidebar',
+				'id'            => 'program_sidebar',
+				'description'   => 'Widgets in this area will be shown only on the program page.',
+				'before_widget' => null,
+				'after_widget'  => null,
+				'before_title'  => '<h2>',
+				'after_title'   => '</h2>',
+			)
+		);
 	}
 );
 
