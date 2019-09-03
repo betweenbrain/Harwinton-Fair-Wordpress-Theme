@@ -248,6 +248,15 @@ li.entry-content {
     display: none;
   }
 
+  /* Prevent nav overlapping CTA */
+  #menu #menu-primary li a{
+    display: none;
+  }
+
+  #menu:target #menu-primary li a{
+    display: block;
+  }
+
   .main-navigation {
     margin: 0 auto;
   }
