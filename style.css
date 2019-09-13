@@ -40,6 +40,13 @@ a:active {
   color: #85cc36;
 }
 
+aside em{
+  color:#cf4647;
+  font-weight: bold;
+  font-size: .825em;
+  padding-left: 1em;
+}
+
 .bar {
   background: #524656;
   padding: 1em;
