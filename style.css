@@ -55,7 +55,7 @@ a:active {
   background: #cf4647;
   font: 700 0.875rem/1.875 Karla, sans-serif;
   text-align: center;
-  padding: 2em;
+  padding: 1em;
 }
 
 .call-to-action a {
@@ -65,6 +65,10 @@ a:active {
 
 .call-to-action a:hover {
   opacity: 0.7;
+}
+
+.call-to-action p{
+  margin: 0;
 }
 
 li.entry-content {
