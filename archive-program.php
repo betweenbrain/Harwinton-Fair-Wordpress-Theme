@@ -20,7 +20,12 @@ $events = new WP_Query(
 $today  = null;
 
 if ( $events->have_posts() ) : ?>
-	<main class="wrapper<?php if ( is_active_sidebar( 'program_sidebar' ) ) { echo ' two-column';} ?>" role="main">
+	<main class="wrapper
+	<?php
+	if ( is_active_sidebar( 'sidebar' ) ) {
+		echo ' two-column';}
+	?>
+	" role="main">
 	<div>
 		<section class="event-day">
 		<?php while ( $events->have_posts() ) : ?>
@@ -46,9 +51,9 @@ if ( $events->have_posts() ) : ?>
 			</ol>
 		</section>
 	</div>
-	<?php if ( is_active_sidebar( 'program_sidebar' ) ) : ?>
+	<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
 	<aside>
-		<?php dynamic_sidebar( 'program_sidebar' ); ?>
+		<?php dynamic_sidebar( 'sidebar' ); ?>
 	</aside>
 	<?php endif; ?>
 	</main>

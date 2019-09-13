@@ -37,9 +37,9 @@ add_action(
 
 		register_sidebar(
 			array(
-				'name'          => 'Home Sidebar',
-				'id'            => 'home_sidebar',
-				'description'   => 'Widgets in this area will be shown only on the home page.',
+				'name'          => 'Sidebar',
+				'id'            => 'sidebar',
+				'description'   => 'Widgets in this area will be shown only on pages that support a sidebar.',
 				'before_widget' => null,
 				'after_widget'  => null,
 				'before_title'  => '<h2>',
@@ -52,18 +52,6 @@ add_action(
 				'name'          => 'Main Menu',
 				'id'            => 'main_menu',
 				'description'   => 'Widgets in this area will be shown on all posts and pages.',
-				'before_widget' => null,
-				'after_widget'  => null,
-				'before_title'  => '<h2>',
-				'after_title'   => '</h2>',
-			)
-		);
-
-		register_sidebar(
-			array(
-				'name'          => 'Program Sidebar',
-				'id'            => 'program_sidebar',
-				'description'   => 'Widgets in this area will be shown only on the program page.',
 				'before_widget' => null,
 				'after_widget'  => null,
 				'before_title'  => '<h2>',

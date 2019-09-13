@@ -32,7 +32,12 @@ get_header(); ?>
 		wp_reset_postdata();
 	}
 	?>
-	<main class="wrapper<?php if ( is_active_sidebar( 'home_sidebar' ) ) echo ' two-column'?>" role="main">
+	<main class="wrapper
+	<?php
+	if ( is_active_sidebar( 'sidebar' ) ) {
+		echo ' two-column';}
+	?>
+	" role="main">
 		<div>
 		<?php
 		$category = get_theme_mod( 'featured_category' );
@@ -52,9 +57,9 @@ get_header(); ?>
 		wp_reset_postdata();
 		?>
 		</div>
-		<?php if ( is_active_sidebar( 'home_sidebar' ) ) : ?>
+		<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
 		<aside>
-			<?php dynamic_sidebar( 'home_sidebar' ); ?>
+			<?php dynamic_sidebar( 'sidebar' ); ?>
 		</aside>
 		<?php endif; ?>
 	</main>
