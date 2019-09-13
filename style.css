@@ -235,6 +235,7 @@ li.entry-content {
     height: auto;
     opacity: 1;
     transition: 0.3s;
+    width: 100%;
   }
 
   #menu .toggle.open,
@@ -259,6 +260,7 @@ li.entry-content {
 
   .main-navigation {
     margin: 0 auto;
+    width: 100%;
   }
 
   .main-navigation .menu li {
