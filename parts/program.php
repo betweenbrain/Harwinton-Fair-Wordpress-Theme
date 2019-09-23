@@ -42,26 +42,7 @@ $date      = ( in_array( 'end', $meta ) )
 		?>
 		</div>
 	</article>
-	<?php endif; ?>
-	<?php if ( ! is_single() ) : ?>
-	<li class="entry-content">
-	<?php echo date( 'g:ia', strtotime( $meta['begin'][0] ) ); ?>
-		<?php if ( isset( $meta['end'] ) ) : ?>
-				until <?php echo date( 'g:ia', strtotime( $meta['end'][0] ) ); ?>
-		<?php endif; ?>
-		<?php
-		$post->post_content
-		? the_title( '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a>' )
-		: the_title();
-		?>
-		<?php if ( sizeof( $locations ) > 0 ) : ?>
-			at the
-			<?php foreach ( $locations as $term ) : ?>
-				<a href="/program/location/<?php echo $term->slug; ?>"><?php echo $term->name; ?></a>
-			<?php endforeach; ?>
-		<?php endif; ?>
-		<?php if($post->post_excerpt) : ?>
-		<em><?php echo $post->post_excerpt; ?></em>
-	<?php endif; ?>
-	</li>
+<?php endif; ?>
+<?php if ( ! is_single() ) : ?>
+	<?php get_template_part( 'parts/program-list-item' ); ?>
 <?php endif; ?>
