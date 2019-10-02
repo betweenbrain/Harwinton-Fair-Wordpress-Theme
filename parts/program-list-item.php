@@ -14,7 +14,7 @@ $date      = ( in_array( 'end', $meta ) )
 	: date( 'l, F jS', strtotime( $meta['begin'][0] ) ) . ' at ' . date( 'g:i A', strtotime( $meta['begin'][0] ) );
 ?>
 <li class="entry-content">
-<?php echo date( 'g:ia', strtotime( $meta['begin'][0] ) ); ?>
+	<?php echo date( 'g:ia', strtotime( $meta['begin'][0] ) ); ?>
 	<?php if ( isset( $meta['end'] ) ) : ?>
 			until <?php echo date( 'g:ia', strtotime( $meta['end'][0] ) ); ?>
 	<?php endif; ?>
